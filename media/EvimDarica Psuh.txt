@@ -1,5 +1,0 @@
-git add .
-
-git commit -m "Resim ve video boyutlari kucultuldu"
-
-git push
