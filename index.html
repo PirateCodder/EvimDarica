@@ -161,6 +161,30 @@
             -ms-touch-action: pan-y;
         }
 
+        /* Galeri bölümünün üstündeki fazla boşluğu düzeltme */
+        .block#gallery {
+            padding-top: 35px; /* 70px yerine 35px - yarıya düşürme */
+        }
+
+        /* Responsive değerler - galeri bölümü üst padding */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .block#gallery { 
+                padding-top: 30px; /* 60px yerine 30px */
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .block#gallery { 
+                padding-top: 20px; /* 40px yerine 20px */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .block#gallery { 
+                padding-top: 15px; /* 30px yerine 15px */
+            }
+        }
+
     </style>
 
     <title>EvimDarıca - Darıca'da Modern Konut Projesi | 33 Daire 3 Blok | Mayıs 2025 Teslim</title>
