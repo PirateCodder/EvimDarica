@@ -1342,10 +1342,6 @@ ul.check-marks li:before {
 .blog-post .meta .link-icon:first-child .fa {
   margin-left: 0;
 }
-.blog-post .meta .tags {
-  display: inline-block;
-  float: right;
-}
 .blog-post .meta .tags .tag {
   margin-left: 5px;
 }
@@ -2165,7 +2161,6 @@ hr {
   .modal.apartment-selector .modal-body .right {
     display: block;
     width: 100%;
-    vertical-align: top;
     padding: 0px 15px;
     margin-bottom: 20px;
   }
