@@ -179,7 +179,9 @@ Headers:		'Montserrat', sans-serif;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   visibility: hidden;
-  -webkit-perspective: 1000;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -200,7 +202,6 @@ Headers:		'Montserrat', sans-serif;
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -529,7 +530,6 @@ a.arrow:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -569,7 +569,6 @@ blockquote p:before {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -597,15 +596,21 @@ blockquote footer figure {
 
 dl {
   margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 dl dt {
   font-weight: 700;
-  float: left;
   padding: 2px 0;
+  flex: 0 0 auto;
 }
 dl dd {
   text-align: right;
   padding: 2px 0;
+  flex: 1 1 auto;
+  margin-left: 10px;
 }
 
 h1 {
@@ -666,7 +671,6 @@ ul.check-marks li:before {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -1620,10 +1624,10 @@ ul.check-marks li:before {
   margin-bottom: 10px;
 }
 .floor-selector .right {
-  float: right;
+  margin-left: auto;
 }
 .floor-selector .left {
-  float: left;
+  margin-right: auto;
 }
 .floor-selector .description {
   margin-bottom: 7px;
@@ -1708,7 +1712,6 @@ hr {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -1845,7 +1848,6 @@ hr {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -2439,7 +2441,6 @@ hr {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -2870,7 +2871,6 @@ hr {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'fontawesome';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -3127,6 +3127,210 @@ hr {
   margin-bottom: -10px;
 }
 
+/* Hero Section Contact Buttons - Premium Design */
+.contact-buttons {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.contact-buttons label {
+  display: block;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.contact-row {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 21px 0px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-btn img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Navbar benzeri alt çizgi animasyonu */
+.contact-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255,255,255,0.8);
+  transition: 0.5s ease;
+  border-radius: 0 0 50px 50px;
+}
+
+.contact-btn:hover:after {
+  width: 100%;
+}
+
+/* Navbar benzeri içerik kayma animasyonu için ek stiller */
+.contact-btn.hover-effect span {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact-buttons label {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-row {
+    gap: 33px;
+  }
+  
+  .contact-btn {
+    padding: 18px 33px;
+    min-width: 182px;
+    gap: 16px;
+  }
+  
+  .contact-btn img {
+    width: 31px;
+    height: 31px;
+  }
+  
+  .contact-btn.hover-effect span {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact-buttons label {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  
+  .contact-row {
+    gap: 26px;
+  }
+  
+  .contact-btn {
+    padding: 16px 26px;
+    min-width: 169px;
+    gap: 13px;
+  }
+  
+  .contact-btn img {
+    width: 29px;
+    height: 29px;
+  }
+  
+  .contact-btn.hover-effect span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-buttons {
+    margin-top: 25px;
+    padding: 0;
+  }
+  
+  .contact-buttons label {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .contact-row {
+    flex-direction: row;
+    gap: 13px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .contact-btn {
+    padding: 23px 20px;
+    min-width: auto;
+    justify-content: center;
+    flex: 1;
+    max-width: 180px;
+  }
+  
+  .contact-btn img {
+    width: 39px;
+    height: 39px;
+  }
+  
+  .contact-btn.hover-effect span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* Mobile'da transform animasyonunu azalt */
+  .contact-btn:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-row {
+    gap: 10px;
+  }
+  
+  .contact-btn {
+    width: 170px;
+    padding: 18px 15px;
+  }
+  
+  .contact-btn img {
+    width: 31px;
+    height: 31px;
+  }
+  
+  .contact-btn.hover-effect span {
+    font-size: 15px;
+  }
+}
+
+/* Dark theme background için özel ayarlar */
+.hero-section .contact-buttons {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animation timing improvements */
+.contact-btn,
+.contact-btn img,
+.contact-btn:before,
+.contact-btn:after,
+.contact-btn.hover-effect span .hover-element {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* 5. Forms */
 button.btn.arrow:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -3149,6 +3353,8 @@ input[type="text"], input[type="email"], input[type="date"], input[type="time"],
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: rgba(0, 0, 0, 0.05);
   border: none;
   outline: none !important;
@@ -3248,7 +3454,6 @@ textarea {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
   font-family: 'ElegantIcons';
-  speak: none;
   font-weight: normal;
   font-variant: normal;
   line-height: 1;
@@ -3294,6 +3499,8 @@ form label.error {
 }
 form.inputs-underline input[type="text"], form.inputs-underline input[type="email"], form.inputs-underline input[type="date"], form.inputs-underline input[type="time"], form.inputs-underline input[type="search"], form.inputs-underline input[type="password"], form.inputs-underline input[type="number"], form.inputs-underline input[type="tel"], form.inputs-underline textarea.form-control {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border-bottom: 2px solid rgba(0, 0, 0, 0.05);
   padding-left: 0;
