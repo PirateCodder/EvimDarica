@@ -2113,6 +2113,169 @@ hr {
   padding: 8px;
 }
 
+/* Responsive Modal Improvements */
+@media (max-width: 991px) {
+  .modal.apartment-selector .modal-dialog {
+    width: 90%;
+    max-width: 700px;
+  }
+  
+  .modal.apartment-selector .modal-body .left,
+  .modal.apartment-selector .modal-body .right {
+    width: 48%;
+    padding: 10px 15px 0px 20px;
+  }
+  
+  .modal.apartment-selector .modal-body .right {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal.apartment-selector .modal-dialog {
+    width: 95%;
+    max-width: none;
+    margin: 10px auto;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header .title {
+    padding: 20px;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header h1 {
+    font-size: 24px;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header h2 {
+    font-size: 16px;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header h3 {
+    font-size: 14px;
+  }
+  
+  .modal.apartment-selector .modal-body {
+    padding-bottom: 20px;
+  }
+  
+  .modal.apartment-selector .modal-body .left,
+  .modal.apartment-selector .modal-body .right {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+  }
+  
+  .modal.apartment-selector .modal-body .right {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
+  }
+  
+  .modal.apartment-selector .modal-body img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .modal.apartment-selector .modal-body .tab-content {
+    padding-top: 15px;
+  }
+  
+  .modal.apartment-selector .nav-tabs {
+    margin-bottom: 10px;
+  }
+  
+  .modal.apartment-selector .nav-tabs > li > a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .modal.apartment-selector .modal-body h3 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .modal.apartment-selector .modal-body h3:first-child {
+    margin-top: 10px;
+  }
+  
+  .modal.apartment-selector .modal-body dl {
+    margin-bottom: 15px;
+  }
+  
+  .modal.apartment-selector .modal-body dl dt,
+  .modal.apartment-selector .modal-body dl dd {
+    padding: 3px 0;
+    font-size: 13px;
+  }
+  
+  .modal.apartment-selector .modal-body p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  
+  .modal.apartment-selector .close {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal.apartment-selector .modal-dialog {
+    width: 98%;
+    margin: 5px auto;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header .title {
+    padding: 15px;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header h1 {
+    font-size: 20px;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header h2 {
+    font-size: 14px;
+  }
+  
+  .modal.apartment-selector .modal-content .modal-header h3 {
+    font-size: 12px;
+  }
+  
+  .modal.apartment-selector .modal-body .left,
+  .modal.apartment-selector .modal-body .right {
+    padding: 0px 10px;
+  }
+  
+  .modal.apartment-selector .nav-tabs > li > a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .modal.apartment-selector .modal-body h3 {
+    font-size: 14px;
+  }
+  
+  .modal.apartment-selector .modal-body dl dt,
+  .modal.apartment-selector .modal-body dl dd {
+    font-size: 12px;
+  }
+  
+  .modal.apartment-selector .modal-body p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .modal.apartment-selector .note {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+
 .number {
   position: relative;
 }

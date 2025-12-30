@@ -182,6 +182,69 @@ $(document).ready(function($) {
         $(this).css("background-image", "url("+ $(this).find("img").attr("src") +")" );
     });
 
+    // Floor plan modal functionality
+    $('.apartment-details-btn').on('click', function(e) {
+        e.preventDefault();
+        var floorType = $(this).data('floor-type');
+        var apartmentTitle = $(this).data('apartment-title');
+        var apartmentPrice = $(this).data('apartment-price');
+        
+        // Update modal title and price
+        $('#floor-modal .modal-title').text(apartmentTitle);
+        $('#floor-modal .modal-header h2').text(apartmentPrice);
+        
+        // Update floor plan image
+        var floorImageSrc = 'media/floor' + floorType + '.png';
+        $('#modal-floor-plan-1 img').attr('src', floorImageSrc);
+        $('#modal-floor-plan-1 a.image-popup').attr('href', floorImageSrc);
+        
+        // Update technical specifications based on floor type
+        updateTechnicalSpecs(floorType);
+        
+        // Show the modal
+        $('#floor-modal').modal('show');
+    });
+
+    function updateTechnicalSpecs(floorType) {
+        var specs = {
+            1: { // 2+1 Daire
+                'Mutfak': '18m<sup>2</sup>',
+                'Ana Yatak Odası': '42m<sup>2</sup>',
+                'Balkon': '26m<sup>2</sup>',
+                'Banyo': '15m<sup>2</sup>',
+                'Oturma Odası': '55m<sup>2</sup>',
+                'Koridor': '35m<sup>2</sup>'
+            },
+            2: { // 3+1 Daire
+                'Mutfak': '24m<sup>2</sup>',
+                'Ana Yatak Odası': '58m<sup>2</sup>',
+                'Balkon': '45m<sup>2</sup>',
+                'Banyo': '20m<sup>2</sup>',
+                'Oturma Odası': '77m<sup>2</sup>',
+                'Koridor': '48m<sup>2</sup>'
+            },
+            3: { // 4+1 Daire
+                'Mutfak': '32m<sup>2</sup>',
+                'Ana Yatak Odası': '75m<sup>2</sup>',
+                'Balkon': '67m<sup>2</sup>',
+                'Banyo': '28m<sup>2</sup>',
+                'Oturma Odası': '95m<sup>2</sup>',
+                'Koridor': '65m<sup>2</sup>'
+            }
+        };
+        
+        var currentSpecs = specs[floorType];
+        if (currentSpecs) {
+            $('#floor-modal .modal-body dl').empty();
+            Object.keys(currentSpecs).forEach(function(key) {
+                $('#floor-modal .modal-body dl').append(
+                    '<dt>' + key + '</dt>' +
+                    '<dd>' + currentSpecs[key] + '</dd>'
+                );
+            });
+        }
+    }
+
     $('.modal-body a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var element = $( $(this).attr("href") ).find(".one-item-carousel");
         if( !element.hasClass("owl-carousel") ){
@@ -198,7 +261,43 @@ $(document).ready(function($) {
         }
     });
 
+    // Video hover effects for better UX
+    $('.video-item').hover(
+        function() {
+            $(this).css('background-color', 'rgba(0,0,0,0.1)');
+        },
+        function() {
+            $(this).css('background-color', 'rgba(0,0,0,0.05)');
+        }
+    );
+
 });
+
+// Global function for video modal
+function openVideoModal(videoSrc, videoTitle) {
+    // Create video modal HTML
+    var videoModalHtml = '<div class="video-modal-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 9999; display: flex; justify-content: center; align-items: center;" onclick="closeVideoModal()">' +
+        '<div class="video-modal-content" style="position: relative; width: 90%; max-width: 800px; background: white; border-radius: 8px; padding: 20px;" onclick="event.stopPropagation();">' +
+        '<button onclick="closeVideoModal()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer; color: #999;">&times;</button>' +
+        '<h3 style="margin-top: 0; margin-bottom: 15px; font-size: 18px; color: #333;">' + videoTitle + '</h3>' +
+        '<video controls style="width: 100%; height: auto; border-radius: 4px;">' +
+        '<source src="' + videoSrc + '" type="video/mp4">' +
+        'Tarayıcınız video etiketini desteklemiyor.' +
+        '</video>' +
+        '</div>' +
+        '</div>';
+    
+    // Add to body
+    $('body').append(videoModalHtml);
+    
+    // Prevent body scroll
+    $('body').css('overflow', 'hidden');
+}
+
+function closeVideoModal() {
+    $('.video-modal-overlay').remove();
+    $('body').css('overflow', 'auto');
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // On Load

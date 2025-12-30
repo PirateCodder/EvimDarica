@@ -691,7 +691,7 @@
                                     <figure class="not-available"><i class="icon_close"></i></figure>
                                     <figure>8 Adet</figure>
                                 </div>
-                                <a href="#" class="btn btn-rounded btn-framed btn-light-frame btn-primary" data-toggle="modal" data-target="#floor-modal">Daire Detayları</a>
+                                <a href="#" class="btn btn-rounded btn-framed btn-light-frame btn-primary apartment-details-btn" data-floor-type="1" data-apartment-title="2+1 Daireler" data-apartment-price="₺1.750.000">Daire Detayları</a>
                                 <div class="price-box-footer">
                                     <a href="#contact" class="btn btn-rounded btn-primary scroll">Bize Ulaşın</a>
                                 </div>
@@ -711,7 +711,7 @@
                                     <figure class="available"><i class="icon_check"></i></figure>
                                     <figure>15 Adet</figure>
                                 </div>
-                                <a href="#" class="btn btn-rounded btn-framed btn-light-frame btn-primary" data-toggle="modal" data-target="#floor-modal">Daire Detayları</a>
+                                <a href="#" class="btn btn-rounded btn-framed btn-light-frame btn-primary apartment-details-btn" data-floor-type="2" data-apartment-title="3+1 Daireler" data-apartment-price="₺2.350.000">Daire Detayları</a>
                                 <div class="price-box-footer">
                                     <a href="#contact" class="btn btn-rounded btn-primary scroll">Bize Ulaşın</a>
                                 </div>
@@ -730,7 +730,7 @@
                                     <figure class="available"><i class="icon_check"></i></figure>
                                     <figure>10 Adet</figure>
                                 </div>
-                                <a href="#" class="btn btn-rounded btn-framed btn-light-frame btn-primary" data-toggle="modal" data-target="#floor-modal">Daire Detayları</a>
+                                <a href="#" class="btn btn-rounded btn-framed btn-light-frame btn-primary apartment-details-btn" data-floor-type="3" data-apartment-title="4+1 Daireler" data-apartment-price="₺2.950.000">Daire Detayları</a>
                                 <div class="price-box-footer">
                                     <a href="#contact" class="btn btn-rounded btn-primary scroll">Bize Ulaşın</a>
                                 </div>
@@ -1149,7 +1149,23 @@
                                 </div>
                             </div>
                             <!--end gallery-->
-                            <a href="http://vimeo.com/24506451" class="video-tour video-popup"><i class="play-icon arrow_triangle-right"></i>Video turunu izlemek için tıklayın</a>
+                            <div class="video-gallery" style="margin-top: 20px;">
+                                <h4 style="margin-bottom: 15px; font-size: 14px;">Proje Video Turu</h4>
+                                <div class="video-list">
+                                    <div class="video-item" style="margin-bottom: 10px; padding: 8px; background-color: rgba(0,0,0,0.05); cursor: pointer;" onclick="openVideoModal('media/demo.mp4', 'Proje Tanıtım Videosu')">
+                                        <i class="fa fa-play-circle" style="margin-right: 8px; color: #333;"></i>
+                                        <span style="font-size: 12px;">Proje Tanıtım Videosu</span>
+                                    </div>
+                                    <div class="video-item" style="margin-bottom: 10px; padding: 8px; background-color: rgba(0,0,0,0.05); cursor: pointer;" onclick="openVideoModal('media/demo2.mp4', 'İç Mekan Turu')">
+                                        <i class="fa fa-play-circle" style="margin-right: 8px; color: #333;"></i>
+                                        <span style="font-size: 12px;">İç Mekan Turu</span>
+                                    </div>
+                                    <div class="video-item" style="margin-bottom: 10px; padding: 8px; background-color: rgba(0,0,0,0.05); cursor: pointer;" onclick="openVideoModal('media/demo3.mp4', 'Çevre Düzenlemesi')">
+                                        <i class="fa fa-play-circle" style="margin-right: 8px; color: #333;"></i>
+                                        <span style="font-size: 12px;">Çevre Düzenlemesi</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!--end tab-content-->
