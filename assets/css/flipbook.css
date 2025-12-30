@@ -1,7 +1,7 @@
 /* Catalog Page Specific Styles */
 .flipbook-section {
     padding: 60px 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../media/exterior-of-modern-dark-house-object-architectura-2025-01-08-12-53-39-utc.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../media/e1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -16,7 +16,7 @@
 
 .catalog-hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../media/exterior-of-modern-dark-house-object-architectura-2025-01-08-12-53-39-utc.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../media/e1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
